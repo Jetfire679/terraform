@@ -10,7 +10,7 @@ terraform {
 }
 
 
-# Create IAM Policy
+# Create a IAM Policy
 resource "aws_iam_policy" "dockerpolicy" {
   name        = join("-", [var.vApp, var.vEnv, "iam-policy"])
   path        = "/"
