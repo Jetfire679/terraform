@@ -21,7 +21,7 @@ users:
 runcmd:
   - sudo amazon-linux-extras install epel -y
   - sudo yum -y install git
-  - git clone https://github.com/linuxacademy/content-hashicorp-certified-terraform-associate-foundations.git 
+  - git clone https://github.com/linuxacademy/content-hashicorp-certified-terraform-associate-foundations.git /git/terraform
   - sudo amazon-linux-extras install ansible2 -y
-  - git clone https://github.com/Jetfire679/base.git
-  - sudo ansible-playbook /home/ec2-user/base/test.yml      
+  - git clone https://github.com/Jetfire679/base.git /git/ansible
+  - sudo ansible-playbook /git/ansible/base/test.yml      
