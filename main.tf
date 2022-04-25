@@ -97,7 +97,7 @@ resource "aws_instance" "dockerserver" {
     connection {
       type        = "ssh"
       user        = "ec2-user"
-      private_key = file("/files/id_rsa")
+      private_key = file("./files/id_rsa")
       host        = self.public_ip
     }
   }
