@@ -28,6 +28,13 @@ resource "aws_iam_policy" "dockerpolicy" {
         Effect   = "Allow"
         Resource = "*"
       },
+      {
+        Action = [
+          "secretsmanager:*",
+        ]
+        Effect   = "Allow"
+        Resource = "*"
+      },
     ]
   })
 }
@@ -45,7 +52,7 @@ resource "aws_iam_role" "dockerrole" {
         Sid    = ""
         Principal = {
           Service = "ec2.amazonaws.com"
-        }
+        },
       },
     ]
   })
