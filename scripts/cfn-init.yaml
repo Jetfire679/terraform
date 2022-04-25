@@ -12,3 +12,12 @@ users:
     lock_passwd: false
     ssh_authorized_keys:
       -  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDQ9QpGHSlsi0eAlIvurR5aFP7uI4P/AeG6mkNrqnzT3O5s4lQOJy+0sqAHi+KCfLx9f0yDvsGLUrSjKRZmuD/Laz8O6oIRZZ3Ja2ux0Y/f3e7u5Jm9stWzKzoL4+ue6T+CPglv2gciGIQjAVBeBRxbuZ3Lhf6bWtGFCzc2b9S/JFBH4wbw0oJDFTEat+IZkmZHbepijSNLdcjEcIAZsChj1HhSbRJ52nLRszDd1FvTcAdxxwM20HSJ9PMKVRep3Bjb7yt7EsM17glN/JWuse2AHxeGxFUcrOe8mA3+KVCMbqi/gxeIqFheOG3T3WhbX9xIQDeb1mGOJZVW3SPFNxnUytt0BuxZ/A9ePaJZhvCFHHkbN0rR22GLFY9duYF7hl7D8B+EBZmMMA7SR6dk4+b+uRnM+cAjJpddDa25Y817c9I3LQaWtKytQwBKo3ECa+xqAMNK+w6Dcj82E+t7HZ4l4ZRth/d3Dh8kq/2WFehfRNJcBsRZmgJv0nVL5Xu2wQU= AzureAD+RamonVignali@LAPTOP-OLJ3FUG5
+
+runcmd:
+  sudo yum update -y
+  sudo amazon-linux-extras install epel -y
+  sudo yum -y install git
+  git clone https://github.com/linuxacademy/content-hashicorp-certified-terraform-associate-foundations.git"
+  sudo amazon-linux-extras install ansible2 -y
+  git clone https://github.com/Jetfire679/base.git
+  sudo ansible-playbook /home/ec2-user/base/test.yml      

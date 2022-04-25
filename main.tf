@@ -83,24 +83,24 @@ resource "aws_instance" "dockerserver" {
   
   
   # Provisioned block used to do base OS setup
-  provisioner "remote-exec" {
-    inline = [
-      "sudo yum update -y",
-      "sudo amazon-linux-extras install epel -y",
-      "sudo yum -y install git",
-      "git clone https://github.com/linuxacademy/content-hashicorp-certified-terraform-associate-foundations.git",
-      "sudo amazon-linux-extras install ansible2 -y",
-      "git clone https://github.com/Jetfire679/base.git",
-      "sudo ansible-playbook /home/ec2-user/base/test.yml"
-      # "echo 'don't forget to configure the aws profile - aws --profile demo configure'
-    ]
-    connection {
-      type        = "ssh"
-      user        = "ec2-user"
-      private_key = file("./files/id_rsa")
-      host        = self.public_ip
-    }
-  }
+  # provisioner "remote-exec" {
+  #   inline = [
+  #     "sudo yum update -y",
+  #     "sudo amazon-linux-extras install epel -y",
+  #     "sudo yum -y install git",
+  #     "git clone https://github.com/linuxacademy/content-hashicorp-certified-terraform-associate-foundations.git",
+  #     "sudo amazon-linux-extras install ansible2 -y",
+  #     "git clone https://github.com/Jetfire679/base.git",
+  #     "sudo ansible-playbook /home/ec2-user/base/test.yml"
+  #     # "echo 'don't forget to configure the aws profile - aws --profile demo configure'
+  #   ]
+  #   connection {
+  #     type        = "ssh"
+  #     user        = "ec2-user"
+  #     private_key = file("./files/id_rsa")
+  #     host        = self.public_ip
+  #   }
+  # }
 
 
   tags = {
