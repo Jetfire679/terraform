@@ -1,5 +1,14 @@
 #Create and bootstrap webserver
 
+terraform {
+  cloud {
+    organization = "vignalis"
+    workspaces {
+      name = "terraform"
+    }
+  }
+}
+
 
 # Create IAM Policy
 resource "aws_iam_policy" "dockerpolicy" {
