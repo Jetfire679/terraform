@@ -1,5 +1,5 @@
 provider "aws" {
-region = "us-east-1"
+region = "us-east-2"
 }
 resource "aws_instance" "claim_dev_server" {
 ami = "ami-02354e95b39ca8dec"
