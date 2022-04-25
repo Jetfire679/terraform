@@ -16,7 +16,7 @@ users:
 # Upgrade the instance on first boot
 #
 # Default: false
-package_upgrade: true
+# package_upgrade: true
 
 runcmd:
   - sudo amazon-linux-extras install epel -y
